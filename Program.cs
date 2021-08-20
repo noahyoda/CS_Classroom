@@ -11,10 +11,11 @@ namespace Classroom
             Console.WriteLine("Welcome to my Classroom project!");
             List<Student> classroom = new List<Student>();
 
-            while(true){
+            bool running = true;
+            while(running){
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1 - Add a student\n2 - Remove a student\n3 - List all students\n4 - Export students to file\n5 - Exit");
-                int choice = Console.Read();
+                int choice = Convert.ToInt32(Console.ReadLine());
 
                 switch (choice){
                     case 1:
@@ -29,10 +30,13 @@ namespace Classroom
                     case 4:
                         break;
                     case 5:
+                        Console.WriteLine("Exiting program...");
+                        running = false;
                         break;
                 }
 
             }
+            
         }
 
         public static void addStudent(List<Student> room){
