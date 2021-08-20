@@ -22,7 +22,7 @@ namespace Classroom
         }
 
         public String toString(){
-            String whole = name + "\t" + (String)grade;
+            return name + "\t" + Convert.ToString(grade);
         }
 
         public double getGPA(){
