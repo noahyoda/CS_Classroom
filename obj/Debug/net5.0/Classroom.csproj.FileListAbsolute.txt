@@ -1,0 +1,16 @@
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.exe
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.deps.json
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.runtimeconfig.json
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.runtimeconfig.dev.json
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.dll
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\ref\Classroom.dll
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\bin\Debug\net5.0\Classroom.pdb
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.csproj.AssemblyReference.cache
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.AssemblyInfoInputs.cache
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.AssemblyInfo.cs
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.csproj.CoreCompileInputs.cache
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.dll
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\ref\Classroom.dll
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.pdb
+C:\Users\Noah\Documents\Dev\c#_practice\Classroom\obj\Debug\net5.0\Classroom.genruntimeconfig.cache
