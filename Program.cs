@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -28,6 +29,7 @@ namespace Classroom
                         printClassroom(classroom);
                         break;
                     case 4:
+                        exportStudents(classroom);
                         break;
                     case 5:
                         Console.WriteLine("Exiting program...");
@@ -40,7 +42,16 @@ namespace Classroom
         }
 
         public static void exportStudents(List<Student> room){
-            
+            try{
+                StreamWriter sw = new StreamWriter("classroom.txt");
+                foreach(Student stu in room){
+                    sw.WriteLine(stu.toString());
+                }
+                sw.Close();
+                Console.WriteLine("Exported Successfully to classroom.txt");
+            } catch(Exception e){
+                Console.WriteLine("Export Error: " + e.Message);
+            }
         }
 
         public static void addStudent(List<Student> room){
