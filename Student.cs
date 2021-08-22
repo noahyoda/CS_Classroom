@@ -7,6 +7,8 @@ namespace Classroom
         private String name;
         private int grade;
         private double gpa;
+        private String notes;
+
         public Student(String name, int grade, double gpa){
             this.name = name;
             this.grade = grade;
@@ -21,12 +23,20 @@ namespace Classroom
             return this.grade;
         }
 
-        public String toString(){
-            return name + "\t" + Convert.ToString(grade) + "\t" + Convert.ToString(gpa);
-        }
-
         public double getGPA(){
             return gpa;
+        }
+
+        public void writeNotes(String stuNotes){
+            this.notes = stuNotes;
+        }
+
+        public String getNotes(){
+            return notes;
+        }
+
+        public String toString(){
+            return name + "\t" + Convert.ToString(grade) + "\t" + Convert.ToString(gpa);
         }
 
     }
