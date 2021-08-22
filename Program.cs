@@ -39,6 +39,10 @@ namespace Classroom
             
         }
 
+        public static void exportStudents(List<Student> room){
+            
+        }
+
         public static void addStudent(List<Student> room){
             Console.WriteLine("What is the students name:\n");
             String name = Console.ReadLine();
