@@ -33,7 +33,19 @@ namespace Classroom
                         printClassroom(classroom);
                         break;
                     case 4:
-                        exportStudents(classroom);
+                        Console.WriteLine("Do you want to use the default file (y/n):");
+                        String select = Console.ReadLine();
+                        if(select.ToLower() == "y")
+                            exportStudents(classroom, "classroom.txt");
+                        else{
+                            Console.WriteLine("What is your desired file (include file type)");
+                            String exportFile = Console.ReadLine();
+                            if(!exportFile.Contains(".")){
+                                Console.WriteLine("Error: did not include file extension type!");
+                                break;
+                            }
+                            exportStudents(classroom, exportFile);
+                        }
                         break;
                     case 5:
                         Console.WriteLine("Exiting program...");
@@ -45,16 +57,16 @@ namespace Classroom
             
         }
 
-        public static void exportStudents(List<Student> room){
+        public static void exportStudents(List<Student> room, String location){
             try{
-                StreamWriter sw = new StreamWriter("classroom.txt");
+                StreamWriter sw = new StreamWriter(location);
                 foreach(Student stu in room){
                     sw.WriteLine(stu.toString());
                 }
                 sw.Close();
-                Console.WriteLine("Exported Successfully to classroom.txt");
+                Console.WriteLine("Exported Successfully to " + location);
             } catch(Exception e){
-                Console.WriteLine("Export Error: " + e.Message);
+                Console.WriteLine("File Error: " + e.Message);
             }
         }
 
