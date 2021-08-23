@@ -65,6 +65,9 @@ namespace Classroom
                 }
                 sw.Close();
                 Console.WriteLine("Exported Successfully to " + location);
+            } catch(FileNotFoundException e){
+                File.Create(location);
+                exportStudents(room, location);
             } catch(Exception e){
                 Console.WriteLine("File Error: " + e.Message);
             }
