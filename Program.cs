@@ -57,7 +57,7 @@ namespace Classroom
             
         }
 
-        public static void exportStudents(List<Student> room, String location){
+        private static void exportStudents(List<Student> room, String location){
             try{
                 StreamWriter sw = new StreamWriter(location);
                 foreach(Student stu in room){
@@ -73,7 +73,7 @@ namespace Classroom
             }
         }
 
-        public static void addStudent(List<Student> room){
+        private static void addStudent(List<Student> room){
             Console.WriteLine("What is the students name:\n");
             String name = Console.ReadLine();
             Console.WriteLine("What is the students grade:\n");
@@ -85,7 +85,7 @@ namespace Classroom
             Console.WriteLine("Student added successfully");
         }
 
-        public static void removeStudent(List<Student> room){
+        private static void removeStudent(List<Student> room){
             Console.WriteLine("Which student do you want to remove:\n");
             String name = Console.ReadLine();
             foreach(Student s in room){
@@ -97,7 +97,7 @@ namespace Classroom
             Console.WriteLine("Error, Student does not exis!\nRemember to check the spelling and capitalization");
         }
 
-        public static void printClassroom(List<Student> room){
+        private static void printClassroom(List<Student> room){
             String x = "";
             foreach(Student stu in room){
                 x += stu.getName() + "\t" + stu.getGPA() + "\t" + stu.getGrade();
