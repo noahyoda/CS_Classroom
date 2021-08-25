@@ -57,6 +57,8 @@ namespace Classroom
             
         }
 
+        /// <summary> Helper method to <c>exportStudents</c> to an
+        /// external file. </summary>
         private static void exportStudents(List<Student> room, String location){
             try{
                 StreamWriter sw = new StreamWriter(location);
