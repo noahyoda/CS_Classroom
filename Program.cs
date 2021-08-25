@@ -33,6 +33,7 @@ namespace Classroom
                         printClassroom(classroom);
                         break;
                     case 4:
+                        Console.WriteLine("WARNING!! exporting will overwrite the file you export into!")
                         Console.WriteLine("Do you want to use the default file (y/n):");
                         String select = Console.ReadLine();
                         if(select.ToLower() != "n")
