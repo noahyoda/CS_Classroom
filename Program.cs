@@ -35,7 +35,7 @@ namespace Classroom
                     case 4:
                         Console.WriteLine("Do you want to use the default file (y/n):");
                         String select = Console.ReadLine();
-                        if(select.ToLower() == "y")
+                        if(select.ToLower() != "n")
                             exportStudents(classroom, "classroom.txt");
                         else{
                             Console.WriteLine("What is your desired file (include file type)");
