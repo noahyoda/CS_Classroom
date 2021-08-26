@@ -88,6 +88,8 @@ namespace Classroom
             }
         }
 
+        ///<summary>This takes in a list of students and prompts input from the console
+        ///to create and add a new student</summary>
         private static void addStudent(List<Student> room)
         {
             Console.WriteLine("What is the students name:\n");
