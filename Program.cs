@@ -17,12 +17,14 @@ namespace Classroom
             List<Student> classroom = new List<Student>();
 
             bool running = true;
-            while(running){
+            while (running)
+            {
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1 - Add a student\n2 - Remove a student\n3 - List all students\n4 - Export students to file\n5 - Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
 
-                switch (choice){
+                switch (choice)
+                {
                     case 1:
                         addStudent(classroom);
                         break;
@@ -36,12 +38,14 @@ namespace Classroom
                         Console.WriteLine("WARNING!! exporting will overwrite the file you export into!");
                         Console.WriteLine("Do you want to use the default file (y/n):");
                         String select = Console.ReadLine();
-                        if(select.ToLower() != "n")
+                        if (select.ToLower() != "n")
                             exportStudents(classroom, "classroom.txt");
-                        else{
+                        else
+                        {
                             Console.WriteLine("What is your desired file (include file type)");
                             String exportFile = Console.ReadLine();
-                            if(!exportFile.Contains(".")){
+                            if (!exportFile.Contains("."))
+                            {
                                 Console.WriteLine("Error: did not include file extension type!");
                                 break;
                             }
@@ -55,28 +59,37 @@ namespace Classroom
                 }
 
             }
-            
+
         }
 
-        /// <summary> Helper method to <c>exportStudents</c> to an
-        /// external file. </summary>
-        private static void exportStudents(List<Student> room, String location){
-            try{
+        /// <summary>This takes in a list of students and file name and exports said list
+        /// of students into the given file. If the file does not exist it will
+        ///create a new file with the given name</summary>
+        private static void exportStudents(List<Student> room, String location)
+        {
+            try
+            {
                 StreamWriter sw = new StreamWriter(location);
-                foreach(Student stu in room){
+                foreach (Student stu in room)
+                {
                     sw.WriteLine(stu.toString());
                 }
                 sw.Close();
                 Console.WriteLine("Exported Successfully to " + location);
-            } catch(FileNotFoundException f){
+            }
+            catch (FileNotFoundException f)
+            {
                 File.Create(location);
                 exportStudents(room, location);
-            } catch(Exception e){
+            }
+            catch (Exception e)
+            {
                 Console.WriteLine("File Error: " + e.Message);
             }
         }
 
-        private static void addStudent(List<Student> room){
+        private static void addStudent(List<Student> room)
+        {
             Console.WriteLine("What is the students name:\n");
             String name = Console.ReadLine();
             Console.WriteLine("What is the students grade:\n");
@@ -88,11 +101,14 @@ namespace Classroom
             Console.WriteLine("Student added successfully");
         }
 
-        private static void removeStudent(List<Student> room){
+        private static void removeStudent(List<Student> room)
+        {
             Console.WriteLine("Which student do you want to remove:\n");
             String name = Console.ReadLine();
-            foreach(Student s in room){
-                if(s.getName() == name){
+            foreach (Student s in room)
+            {
+                if (s.getName() == name)
+                {
                     room.Remove(s);
                     return;
                 }
@@ -100,9 +116,11 @@ namespace Classroom
             Console.WriteLine("Error, Student does not exis!\nRemember to check the spelling and capitalization");
         }
 
-        private static void printClassroom(List<Student> room){
+        private static void printClassroom(List<Student> room)
+        {
             String x = "";
-            foreach(Student stu in room){
+            foreach (Student stu in room)
+            {
                 x += stu.getName() + "\t" + stu.getGPA() + "\t" + stu.getGrade();
             }
             Console.WriteLine(x);
