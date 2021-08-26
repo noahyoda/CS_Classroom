@@ -62,9 +62,11 @@ namespace Classroom
 
         }
 
-        /// <summary>This takes in a list of students and file name and exports said list
-        /// of students into the given file. If the file does not exist it will
-        ///create a new file with the given name</summary>
+        /** 
+        <summary>This takes in a list of students and file name and exports said list
+        of students into the given file. If the file does not exist it will
+        create a new file with the given name</summary>
+        */
         private static void exportStudents(List<Student> room, String location)
         {
             try
@@ -88,8 +90,10 @@ namespace Classroom
             }
         }
 
-        ///<summary>This takes in a list of students and prompts input from the console
-        ///to create and add a new student</summary>
+        /**
+        <summary>This takes in a list of students and prompts input from the console
+        to create and add a new student</summary>
+        */
         private static void addStudent(List<Student> room)
         {
             Console.WriteLine("What is the students name:\n");
