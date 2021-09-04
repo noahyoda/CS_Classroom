@@ -30,7 +30,10 @@ namespace Classroom
         public void writeNotes(String stuNotes){
             this.notes = stuNotes;
         }
-
+        /// <summary>
+        /// This method returns the students notes
+        /// </summary>
+        /// <returns>string of students notes</returns>
         public String getNotes(){
             return notes;
         }
