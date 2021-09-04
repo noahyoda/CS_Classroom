@@ -7,10 +7,7 @@ namespace Classroom
 {
     class Program
     {
-        /*
-        * TODO:
-        * Add option to choose what file to export students to
-        */
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to my Classroom project!");

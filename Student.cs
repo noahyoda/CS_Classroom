@@ -34,7 +34,10 @@ namespace Classroom
         public String getNotes(){
             return notes;
         }
-
+        /// <summary>
+        /// This method returns a string with the student name and info
+        /// </summary>
+        /// <returns>string with student name and info</returns>
         public String toString(){
             return name + "\t" + Convert.ToString(grade) + "\t" + Convert.ToString(gpa);
         }
